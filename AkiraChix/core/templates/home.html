@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>karibu</title>
+	<style type="text/css">
+		body{
+			background-color:#ffffff;
+		}
+		.felly.h1{
+			color: blue;
+		}
+
+	</style>
+</head>
+<body>
+	<div class="felly">
+		
+	{% if user.is_authenticated %}
+	<div class="container">
+  <!-- Content here -->
+
+	<h1>Welcome to student registration  portal</h1>
+	
+</div>
+	welcome {{user.username}}
+
+	{% else %}
+
+	welcome guest
+	please <a href="/accounts/layout/">register</a>
+	or <a href="/accounts/login/">login</a>
+
+	{% endif %}
+</div>
+</body>
+</html>
